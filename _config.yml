@@ -10,6 +10,11 @@ remote_theme: mmistakes/minimal-mistakes
 minimal_mistakes_skin: "air" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 markdown: kramdown
 
+# Disable syntax highlighting
+kramdown:
+  syntax_highlighter_opts:
+    disable: true
+
 # Reading Files
 include:
   - _pages

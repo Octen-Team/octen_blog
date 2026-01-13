@@ -15,11 +15,11 @@ body {
    LAYOUT WIDTH OPTIMIZATION - Make content wider for technical blog
    ========================================================================== */
 
-/* Increase maximum page width - Compact layout */
+/* Increase maximum page width - Compact layout with centered content */
 .page {
-    max-width: 1200px !important;
+    max-width: 100% !important;
     width: 100% !important;
-    padding: 1em 2em !important;
+    padding: 1em 0 !important;
     margin: 0 auto !important;
 }
 
@@ -27,18 +27,23 @@ body {
 #main {
     max-width: 100% !important;
     background: #ffffff !important;
+    display: flex !important;
+    justify-content: center !important;
 }
 
-/* Adjust content wrapper for wider layout */
+/* Adjust content wrapper for centered layout */
 .page__inner-wrap {
-    max-width: none !important;
+    max-width: 1000px !important;
+    width: 100% !important;
+    padding: 0 2em !important;
+    margin: 0 auto !important;
 }
 
 /* Main content gets full space without sidebar */
 .page__content {
-    max-width: 900px !important;
+    max-width: 100% !important;
     width: 100% !important;
-    margin: 0 auto !important;
+    margin: 0 !important;
     float: none !important;
 }
 
@@ -49,15 +54,16 @@ body {
 
 /* Grid layout adjustments for wider content */
 @media (min-width: 80em) {
-    .page {
-        width: 100% !important;
-        padding: 1.5em 3em !important;
+    .page__inner-wrap {
+        max-width: 1100px !important;
+        padding: 0 3em !important;
     }
 }
 
 @media (min-width: 64em) and (max-width: 80em) {
-    .page {
-        padding: 1.5em 2em !important;
+    .page__inner-wrap {
+        max-width: 900px !important;
+        padding: 0 2em !important;
     }
 }
 
@@ -135,7 +141,7 @@ code, pre, pre code {
     border: none !important;
 }
 
-/* Code blocks - Simple and compact */
+/* Code blocks - Simple and compact, no syntax highlighting */
 .page__content pre {
     background: #f6f8fa !important;
     padding: 1em !important;
@@ -151,6 +157,49 @@ code, pre, pre code {
     padding: 0 !important;
     border: none !important;
     font-size: 0.9em !important;
+}
+
+/* Override any syntax highlighting - force plain text style */
+.page__content pre code *,
+.page__content pre code span,
+.page__content .highlight code *,
+.page__content .highlight code span {
+    color: #24292e !important;
+    background: transparent !important;
+    font-weight: normal !important;
+    font-style: normal !important;
+}
+
+/* Remove syntax highlighting from various elements */
+.page__content .highlight,
+.page__content .highlighter-rouge {
+    background: #f6f8fa !important;
+}
+
+.page__content .highlight pre,
+.page__content .highlighter-rouge pre {
+    background: #f6f8fa !important;
+}
+
+/* Disable all syntax highlighting classes */
+.page__content .highlight .k,
+.page__content .highlight .kd,
+.page__content .highlight .kn,
+.page__content .highlight .s,
+.page__content .highlight .s1,
+.page__content .highlight .s2,
+.page__content .highlight .n,
+.page__content .highlight .nx,
+.page__content .highlight .mi,
+.page__content .highlight .mf,
+.page__content .highlight .c,
+.page__content .highlight .c1,
+.page__content .highlight .cm,
+.page__content .highlight .o,
+.page__content .highlight .p {
+    color: #24292e !important;
+    background: transparent !important;
+    font-weight: normal !important;
 }
 
 /* Images - Clean compact style */
@@ -294,9 +343,9 @@ article img,
 
 /* Responsive adjustments - Compact */
 @media (max-width: 1024px) {
-    .page {
+    .page__inner-wrap {
         max-width: 100% !important;
-        padding: 1em 1.5em !important;
+        padding: 0 1.5em !important;
     }
 
     .page__content {
@@ -306,8 +355,8 @@ article img,
 }
 
 @media (max-width: 768px) {
-    .page {
-        padding: 0.8em 1em !important;
+    .page__inner-wrap {
+        padding: 0 1em !important;
     }
 
     .page__content {
