@@ -12,34 +12,37 @@ body {
 }
 
 /* ==========================================================================
-   LAYOUT WIDTH OPTIMIZATION - Make content wider for technical blog
+   LAYOUT WIDTH OPTIMIZATION - Centered layout with equal margins
    ========================================================================== */
 
-/* Increase maximum page width - Compact layout with centered content */
-.page {
-    max-width: 100% !important;
-    width: 100% !important;
-    padding: 1em 0 !important;
-    margin: 0 auto !important;
-}
-
-/* Wider main content area */
+/* Main container - full width */
 #main {
     max-width: 100% !important;
     background: #ffffff !important;
-    display: flex !important;
-    justify-content: center !important;
 }
 
-/* Adjust content wrapper for centered layout */
-.page__inner-wrap {
+/* Page wrapper - centered with max width */
+.page {
     max-width: 1000px !important;
     width: 100% !important;
-    padding: 0 2em !important;
-    margin: 0 auto !important;
+    padding-left: 2em !important;
+    padding-right: 2em !important;
+    padding-top: 1em !important;
+    padding-bottom: 1em !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    box-sizing: border-box !important;
 }
 
-/* Main content gets full space without sidebar */
+/* Content wrapper - full width of page */
+.page__inner-wrap {
+    max-width: 100% !important;
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* Main content - full width */
 .page__content {
     max-width: 100% !important;
     width: 100% !important;
@@ -52,18 +55,21 @@ body {
     display: none !important;
 }
 
-/* Grid layout adjustments for wider content */
+/* Larger screens - wider max width */
 @media (min-width: 80em) {
-    .page__inner-wrap {
+    .page {
         max-width: 1100px !important;
-        padding: 0 3em !important;
+        padding-left: 3em !important;
+        padding-right: 3em !important;
     }
 }
 
+/* Medium screens */
 @media (min-width: 64em) and (max-width: 80em) {
-    .page__inner-wrap {
+    .page {
         max-width: 900px !important;
-        padding: 0 2em !important;
+        padding-left: 2.5em !important;
+        padding-right: 2.5em !important;
     }
 }
 
@@ -71,9 +77,9 @@ code, pre, pre code {
     font-family: 'JetBrains Mono', 'Menlo', 'Monaco', monospace !important;
 }
 
-/* Better typography - Clean and compact */
+/* Better typography - Clean and compact with smaller fonts */
 .page__content {
-    font-size: 1.02em !important;
+    font-size: 0.95em !important;
     line-height: 1.7 !important;
     color: #24292e !important;
 }
@@ -83,14 +89,22 @@ code, pre, pre code {
     line-height: 1.7 !important;
 }
 
-/* Headings with clean, minimal style - Compact spacing */
+/* Page title - Should be largest */
+.page__title {
+    font-size: 1.8em !important;
+    font-weight: 700 !important;
+    margin-bottom: 0.5em !important;
+    line-height: 1.3 !important;
+}
+
+/* Headings with clean, minimal style - Smaller sizes */
 .page__content h2 {
     margin-top: 2em !important;
     margin-bottom: 0.8em !important;
     padding-bottom: 0.3em !important;
     border-bottom: 1px solid #e1e4e8 !important;
     color: #24292e !important;
-    font-size: 1.75em !important;
+    font-size: 1.5em !important;
     font-weight: 600 !important;
 }
 
@@ -98,7 +112,7 @@ code, pre, pre code {
     margin-top: 1.6em !important;
     margin-bottom: 0.6em !important;
     color: #24292e !important;
-    font-size: 1.35em !important;
+    font-size: 1.2em !important;
     font-weight: 600 !important;
 }
 
@@ -106,7 +120,7 @@ code, pre, pre code {
     margin-top: 1.3em !important;
     margin-bottom: 0.5em !important;
     color: #24292e !important;
-    font-size: 1.12em !important;
+    font-size: 1.05em !important;
     font-weight: 600 !important;
 }
 
@@ -136,7 +150,7 @@ code, pre, pre code {
     background: #f6f8fa !important;
     padding: 0.2em 0.4em !important;
     border-radius: 3px !important;
-    font-size: 0.9em !important;
+    font-size: 0.88em !important;
     color: #24292e !important;
     border: none !important;
 }
@@ -156,7 +170,7 @@ code, pre, pre code {
     color: #24292e !important;
     padding: 0 !important;
     border: none !important;
-    font-size: 0.9em !important;
+    font-size: 0.88em !important;
 }
 
 /* Override any syntax highlighting - force plain text style */
@@ -244,7 +258,7 @@ article img,
     border-collapse: collapse !important;
     border: 1px solid #e1e4e8 !important;
     border-radius: 4px !important;
-    font-size: 0.9em !important;
+    font-size: 0.88em !important;
     -webkit-overflow-scrolling: touch !important;
 }
 
@@ -277,7 +291,7 @@ article img,
     text-align: left !important;
     font-weight: 600 !important;
     color: #24292e !important;
-    font-size: 0.9em !important;
+    font-size: 0.95em !important;
 }
 
 .page__content table td {
@@ -331,21 +345,17 @@ article img,
 
 /* Reading time and metadata - Compact */
 .page__meta {
-    font-size: 0.88em !important;
+    font-size: 0.85em !important;
     color: #586069 !important;
     margin-bottom: 1.2em !important;
 }
 
-/* Page title - Compact spacing */
-.page__title {
-    margin-bottom: 0.5em !important;
-}
-
 /* Responsive adjustments - Compact */
 @media (max-width: 1024px) {
-    .page__inner-wrap {
+    .page {
         max-width: 100% !important;
-        padding: 0 1.5em !important;
+        padding-left: 1.5em !important;
+        padding-right: 1.5em !important;
     }
 
     .page__content {
@@ -355,23 +365,34 @@ article img,
 }
 
 @media (max-width: 768px) {
-    .page__inner-wrap {
-        padding: 0 1em !important;
+    .page {
+        padding-left: 1em !important;
+        padding-right: 1em !important;
+        padding-top: 0.8em !important;
+        padding-bottom: 0.8em !important;
     }
 
     .page__content {
-        font-size: 1em !important;
+        font-size: 0.92em !important;
         width: 100% !important;
     }
 
-    .page__content h2 {
+    .page__title {
         font-size: 1.5em !important;
+    }
+
+    .page__content h2 {
+        font-size: 1.3em !important;
         margin-top: 1.5em !important;
     }
 
     .page__content h3 {
-        font-size: 1.25em !important;
+        font-size: 1.1em !important;
         margin-top: 1.2em !important;
+    }
+
+    .page__content h4 {
+        font-size: 1.02em !important;
     }
 
     .page__content img,
