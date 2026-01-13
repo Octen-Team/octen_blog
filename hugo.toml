@@ -1,0 +1,70 @@
+baseURL = "https://octen-team.github.io/octen_blog/"
+languageCode = "zh-cn"
+title = "Octen Blog"
+theme = "papermod"
+
+# 启用 emoji
+enableEmoji = true
+
+# 分页
+[pagination]
+  pagerSize = 5
+
+[params]
+  # 主题配置
+  env = "production"
+  description = "Octen Team Blog - AI/ML Research and Engineering"
+  author = "Octen Team"
+  defaultTheme = "dark"  # 默认使用深色模式
+
+  # 显示设置
+  ShowReadingTime = true
+  ShowShareButtons = true
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowWordCount = true
+  ShowRssButtonInSectionTermList = true
+
+  # 主页设置
+  [params.homeInfoParams]
+    Title = "Welcome to Octen Blog"
+    Content = "AI/ML Research and Engineering Insights"
+
+  # 代码高亮设置
+  [params.assets]
+    disableFingerprinting = false
+    disableHLJS = true  # 禁用语法高亮
+
+[markup]
+  # Markdown 渲染设置
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true  # 允许 HTML in markdown
+  [markup.highlight]
+    # 代码高亮设置 - 如不需要可以禁用
+    codeFences = true
+    guessSyntax = false
+    lineNos = false
+    style = "monokai"
+
+[menu]
+  [[menu.main]]
+    identifier = "posts"
+    name = "Posts"
+    url = "/posts/"
+    weight = 10
+  [[menu.main]]
+    identifier = "tags"
+    name = "Tags"
+    url = "/tags/"
+    weight = 20
+  [[menu.main]]
+    identifier = "categories"
+    name = "Categories"
+    url = "/categories/"
+    weight = 30
+
+# 输出格式
+[outputs]
+  home = ["HTML", "RSS", "JSON"]

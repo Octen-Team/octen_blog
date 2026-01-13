@@ -1,10 +1,10 @@
 ---
-layout: single
 title: "Octen Series: Optimizing Embedding Models to #1 on RTEB Leaderboard"
 date: 2026-01-13
 categories: [AI, Embedding, RTEB]
-author: Octen Team
-toc: false
+tags: [AI, Embedding, RTEB, Machine-Learning]
+author: "Octen Team"
+draft: false
 ---
 
 ## 1. Background and Motivation
@@ -56,14 +56,14 @@ Compared to general text retrieval, industry vertical scenarios face more severe
 
 **These challenges motivated us to design a systematic optimization approach, ultimately enabling the Octen 8B model to achieve first place on the [RTEB leaderboard](https://huggingface.co/spaces/mteb/leaderboard).**
 
-![RTEB Leaderboard Results]({{ site.baseurl }}/assets/images/posts/octen_rteb_leaderboard.png)
+![RTEB Leaderboard Results](/images/posts/octen_rteb_leaderboard.png)
 *Figure 1: Octen-Embedding-8B achieves first place on the RTEB leaderboard*
 
 ---
 
 ## 2. Core Technical Optimizations
 
-![Octen Embedding Model Overview]({{ site.baseurl }}/assets/images/posts/octen_embedding.png)
+![Octen Embedding Model Overview](/images/posts/octen_embedding.png)
 *Figure 2: Overview of Octen embedding model architecture and training pipeline*
 
 ### 2.1 Synthetic Data Optimization

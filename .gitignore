@@ -1,0 +1,21 @@
+# Hugo构建输出
+/public/
+/resources/_gen/
+/assets/jsconfig.json
+hugo_stats.json
+
+# 临时文件
+.hugo_build.lock
+
+# macOS
+.DS_Store
+
+# 编辑器
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Hugo缓存
+/.hugo_build.lock
