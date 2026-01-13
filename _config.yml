@@ -1,25 +1,17 @@
 title: AI Research Blog
 description: Technical blog about AI and machine learning research
-author: Octen Team
+author:
+  name: Octen Team
 url: "" # Will be your GitHub Pages URL
 
 # Build settings
-remote_theme: cotes2020/jekyll-theme-chirpy
+remote_theme: mmistakes/minimal-mistakes
+minimal_mistakes_skin: "air" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 markdown: kramdown
 
-# Timezone
-timezone: Asia/Shanghai
-
-# Plugins
-plugins:
-  - jekyll-feed
-  - jekyll-seo-tag
-  - jekyll-sitemap
-  - jekyll-paginate
-
-# Pagination
-paginate: 10
-paginate_path: "/page:num/"
+# Reading Files
+include:
+  - _pages
 
 # Exclude from processing
 exclude:
@@ -30,30 +22,47 @@ exclude:
   - .git/
   - .gitignore
 
-# Collections
-collections:
-  posts:
-    output: true
-    permalink: /posts/:title/
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-include-cache
+
+# Pagination
+paginate: 5
+paginate_path: /page:num/
+
+# Outputting
+permalink: /:categories/:title/
+timezone: Asia/Shanghai
 
 # Defaults
 defaults:
+  # _posts
   - scope:
       path: ""
-      type: "posts"
+      type: posts
     values:
-      layout: post
-      author: Octen Team
-      toc: true  # Enable table of contents
+      layout: single
+      author_profile: false
+      read_time: true
       comments: false
+      share: true
+      related: true
+      toc: true
+      toc_label: "Table of Contents"
+      toc_sticky: true
 
-# Theme Settings (Chirpy specific)
-theme_mode: # [light|dark]
-avatar: # Path to avatar image
-social:
-  name: Octen Team
+# Site Author (optional, can customize sidebar)
+author:
+  name: "Octen Team"
+  avatar: # Path to avatar image
+  bio: "AI and Machine Learning Research"
+  location: # Your location
   links: []
 
 # Analytics (optional)
-google_analytics:
-  id: # Your GA tracking ID
+analytics:
+  provider: false # or "google-gtag", "google-universal", etc.
