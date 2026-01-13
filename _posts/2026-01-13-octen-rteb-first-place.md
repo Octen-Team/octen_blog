@@ -57,14 +57,14 @@ Compared to general text retrieval, industry vertical scenarios face more severe
 
 **These challenges motivated us to design a systematic optimization approach, ultimately enabling the Octen 8B model to achieve first place on the [RTEB leaderboard](https://huggingface.co/spaces/mteb/leaderboard).**
 
-![RTEB Leaderboard Results](/assets/images/posts/octen_rteb_leaderboard.png)
+![RTEB Leaderboard Results]({{ site.baseurl }}/assets/images/posts/octen_rteb_leaderboard.png)
 *Figure 1: Octen-Embedding-8B achieves first place on the RTEB leaderboard*
 
 ---
 
 ## 2. Core Technical Optimizations
 
-![Octen Embedding Model Overview](/assets/images/posts/octen_embedding.png)
+![Octen Embedding Model Overview]({{ site.baseurl }}/assets/images/posts/octen_embedding.png)
 *Figure 2: Overview of Octen embedding model architecture and training pipeline*
 
 ### 2.1 Synthetic Data Optimization
