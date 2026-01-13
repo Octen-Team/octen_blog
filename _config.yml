@@ -1,0 +1,36 @@
+title: Octen AI Research Blog
+description: Technical blog about Octen Embedding Models and AI research
+author: Octen Team
+
+# Build settings
+theme: jekyll-theme-cayman
+markdown: kramdown
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .git/
+  - .gitignore
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /:year/:month/:day/:title/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post
+      author: Octen Team
