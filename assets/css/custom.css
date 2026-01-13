@@ -8,6 +8,7 @@
 /* Apply custom fonts globally */
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+    background: #ffffff !important;
 }
 
 /* ==========================================================================
@@ -82,47 +83,42 @@ code, pre, pre code {
     font-family: 'JetBrains Mono', 'Menlo', 'Monaco', monospace !important;
 }
 
-/* Better typography */
+/* Better typography - Clean and minimal */
 .page__content {
-    font-size: 1.1em !important;
-    line-height: 1.8 !important;
-    color: #333 !important;
+    font-size: 1.05em !important;
+    line-height: 1.75 !important;
+    color: #24292e !important;
 }
 
 .page__content p {
-    margin: 1.5em 0 !important;
-    line-height: 1.8 !important;
+    margin: 1.3em 0 !important;
+    line-height: 1.75 !important;
 }
 
-/* Headings with better spacing and style */
+/* Headings with clean, minimal style */
 .page__content h2 {
     margin-top: 2.5em !important;
     margin-bottom: 1em !important;
-    padding-bottom: 0.5em !important;
-    border-bottom: 3px solid #0066cc !important;
-    color: #1a1a1a !important;
-    font-size: 2em !important;
-    font-weight: 700 !important;
+    padding-bottom: 0.3em !important;
+    border-bottom: 1px solid #e1e4e8 !important;
+    color: #24292e !important;
+    font-size: 1.8em !important;
+    font-weight: 600 !important;
 }
 
 .page__content h3 {
     margin-top: 2em !important;
     margin-bottom: 0.8em !important;
-    color: #2a2a2a !important;
-    font-size: 1.5em !important;
+    color: #24292e !important;
+    font-size: 1.4em !important;
     font-weight: 600 !important;
-    padding-left: 0.8em !important;
-    border-left: 5px solid #0066cc !important;
-    background: linear-gradient(to right, #f0f8ff, transparent) !important;
-    padding-top: 0.3em !important;
-    padding-bottom: 0.3em !important;
 }
 
 .page__content h4 {
     margin-top: 1.5em !important;
     margin-bottom: 0.6em !important;
-    color: #3a3a3a !important;
-    font-size: 1.25em !important;
+    color: #24292e !important;
+    font-size: 1.15em !important;
     font-weight: 600 !important;
 }
 
@@ -138,44 +134,44 @@ code, pre, pre code {
     line-height: 1.8 !important;
 }
 
-/* Blockquotes */
+/* Blockquotes - Minimal style */
 .page__content blockquote {
-    border-left: 5px solid #0066cc !important;
-    padding: 1em 1.5em !important;
-    margin: 2em 0 !important;
-    background: #f8f9fa !important;
-    font-style: italic !important;
-    color: #555 !important;
+    border-left: 3px solid #dfe2e5 !important;
+    padding: 0.8em 1.2em !important;
+    margin: 1.5em 0 !important;
+    background: #f6f8fa !important;
+    color: #6a737d !important;
 }
 
-/* Code styling */
+/* Code styling - Clean inline code */
 .page__content code {
-    background: #f5f5f5 !important;
-    padding: 0.2em 0.5em !important;
-    border-radius: 4px !important;
+    background: #f6f8fa !important;
+    padding: 0.2em 0.4em !important;
+    border-radius: 3px !important;
     font-size: 0.9em !important;
-    color: #d73a49 !important;
-    border: 1px solid #e1e4e8 !important;
+    color: #24292e !important;
+    border: none !important;
 }
 
+/* Code blocks - Simple and clean */
 .page__content pre {
-    background: #282c34 !important;
-    padding: 1.5em !important;
-    border-radius: 8px !important;
+    background: #f6f8fa !important;
+    padding: 1.2em !important;
+    border-radius: 6px !important;
     overflow-x: auto !important;
-    margin: 2em 0 !important;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15) !important;
+    margin: 1.5em 0 !important;
+    border: 1px solid #e1e4e8 !important;
 }
 
 .page__content pre code {
     background: transparent !important;
-    color: #abb2bf !important;
+    color: #24292e !important;
     padding: 0 !important;
     border: none !important;
-    font-size: 0.95em !important;
+    font-size: 0.9em !important;
 }
 
-/* Images with controlled size - Multiple selectors for better specificity */
+/* Images - Clean minimal style */
 .page__content img,
 .page__inner-wrap img,
 article img,
@@ -183,9 +179,9 @@ article img,
     max-width: 1100px !important;
     width: 90% !important;
     height: auto !important;
-    border-radius: 8px !important;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.2) !important;
-    margin: 2.5em auto !important;
+    border-radius: 4px !important;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.08) !important;
+    margin: 2em auto !important;
     display: block !important;
     border: 1px solid #e1e4e8 !important;
 }
@@ -197,28 +193,27 @@ article img,
     width: 90% !important;
 }
 
-/* Image captions (em tags after images) */
+/* Image captions */
 .page__content p em {
     display: block !important;
     text-align: center !important;
-    color: #666 !important;
+    color: #6a737d !important;
     font-size: 0.9em !important;
-    margin-top: 0.8em !important;
+    margin-top: 0.6em !important;
     margin-bottom: 1.5em !important;
     font-style: italic !important;
 }
 
-/* Table wrapper for horizontal scrolling */
+/* Table - Clean professional style */
 .page__content table {
     display: block !important;
     width: 100% !important;
     overflow-x: auto !important;
-    margin: 2.5em 0 !important;
+    margin: 2em 0 !important;
     border-collapse: collapse !important;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.1) !important;
-    border-radius: 8px !important;
-    font-size: 0.95em !important;
-    /* Enable smooth scrolling on touch devices */
+    border: 1px solid #e1e4e8 !important;
+    border-radius: 4px !important;
+    font-size: 0.92em !important;
     -webkit-overflow-scrolling: touch !important;
 }
 
@@ -240,106 +235,97 @@ article img,
     white-space: nowrap !important;
 }
 
+/* Simple table header */
 .page__content table thead {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    background: #f6f8fa !important;
+    border-bottom: 2px solid #e1e4e8 !important;
 }
 
 .page__content table th {
-    padding: 1.2em 1em !important;
+    padding: 0.8em 1em !important;
     text-align: left !important;
     font-weight: 600 !important;
-    color: white !important;
-    text-transform: uppercase !important;
-    letter-spacing: 0.5px !important;
-    font-size: 0.85em !important;
+    color: #24292e !important;
+    font-size: 0.9em !important;
 }
 
 .page__content table td {
-    padding: 1em !important;
-    border-bottom: 1px solid #e0e0e0 !important;
-    color: #333 !important;
+    padding: 0.8em 1em !important;
+    border-bottom: 1px solid #e1e4e8 !important;
+    color: #24292e !important;
 }
 
 .page__content table tbody tr:hover {
-    background: #f8f9fa !important;
-    transition: background 0.3s ease !important;
+    background: #f6f8fa !important;
 }
 
 .page__content table tbody tr:last-child td {
     border-bottom: none !important;
 }
 
-/* Bold table cells (for highlighted rows) */
+/* Bold table cells */
 .page__content table td strong,
 .page__content table td b {
-    color: #0066cc !important;
-    font-weight: 700 !important;
+    font-weight: 600 !important;
 }
 
-/* Links */
+/* Links - Simple underline style */
 .page__content a {
-    color: #0066cc !important;
+    color: #0366d6 !important;
     text-decoration: none !important;
-    border-bottom: 1px solid transparent !important;
-    transition: all 0.3s ease !important;
 }
 
 .page__content a:hover {
-    color: #004499 !important;
-    border-bottom: 1px solid #004499 !important;
+    text-decoration: underline !important;
 }
 
 /* Horizontal rules */
 .page__content hr {
     border: none !important;
-    height: 3px !important;
-    background: linear-gradient(to right, transparent, #0066cc, transparent) !important;
-    margin: 3em 0 !important;
+    height: 1px !important;
+    background: #e1e4e8 !important;
+    margin: 2.5em 0 !important;
 }
 
 /* Strong emphasis */
 .page__content strong,
 .page__content b {
-    color: #1a1a1a !important;
     font-weight: 600 !important;
 }
 
-/* TOC styling */
+/* TOC styling - Clean and minimal */
 .toc {
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%) !important;
-    border: 2px solid #dee2e6 !important;
-    border-radius: 10px !important;
-    padding: 1.5em !important;
-    margin-bottom: 2.5em !important;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08) !important;
+    background: #f6f8fa !important;
+    border: 1px solid #e1e4e8 !important;
+    border-radius: 4px !important;
+    padding: 1.2em !important;
+    margin-bottom: 2em !important;
 }
 
 .toc .nav__title {
-    color: #1a1a1a !important;
-    font-weight: 700 !important;
-    margin: 0 0 1em 0 !important;
+    color: #24292e !important;
+    font-weight: 600 !important;
+    margin: 0 0 0.8em 0 !important;
     padding: 0 !important;
     background: none !important;
-    font-size: 1.1em !important;
+    font-size: 1em !important;
 }
 
 .toc__menu a {
-    color: #333 !important;
-    border-bottom: none !important;
-    padding: 0.4em 0 !important;
+    color: #586069 !important;
+    padding: 0.3em 0 !important;
     display: block !important;
 }
 
 .toc__menu a:hover {
-    color: #0066cc !important;
-    padding-left: 0.5em !important;
-    transition: all 0.3s ease !important;
+    color: #0366d6 !important;
+    text-decoration: none !important;
 }
 
 /* Reading time and metadata */
 .page__meta {
     font-size: 0.9em !important;
-    color: #666 !important;
+    color: #586069 !important;
     margin-bottom: 1.5em !important;
 }
 
