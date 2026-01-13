@@ -4,9 +4,7 @@ title: "Octen Series: Optimizing Embedding Models to #1 on RTEB Leaderboard"
 date: 2026-01-13
 categories: [AI, Embedding, RTEB]
 author: Octen Team
-toc: true
-toc_label: "Table of Contents"
-toc_sticky: true
+toc: false
 ---
 
 ## 1. Background and Motivation

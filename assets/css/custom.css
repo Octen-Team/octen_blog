@@ -15,11 +15,11 @@ body {
    LAYOUT WIDTH OPTIMIZATION - Make content wider for technical blog
    ========================================================================== */
 
-/* Increase maximum page width for better content display */
+/* Increase maximum page width - Compact layout */
 .page {
-    max-width: 1400px !important;
+    max-width: 1200px !important;
     width: 100% !important;
-    padding: 2em !important;
+    padding: 1em 2em !important;
     margin: 0 auto !important;
 }
 
@@ -34,48 +34,30 @@ body {
     max-width: none !important;
 }
 
-/* Main content gets more space - reduce sidebar impact */
+/* Main content gets full space without sidebar */
 .page__content {
-    max-width: none !important;
+    max-width: 900px !important;
     width: 100% !important;
+    margin: 0 auto !important;
+    float: none !important;
 }
 
-/* For layouts with sidebar, adjust the ratio */
-.sidebar.sticky {
-    width: 280px !important;
-}
-
-/* Adjust main content when sidebar is present */
+/* Hide sidebar completely */
 .sidebar__right {
-    width: 280px !important;
-    margin-left: 2em !important;
-}
-
-.sidebar__right.sticky {
-    width: 280px !important;
+    display: none !important;
 }
 
 /* Grid layout adjustments for wider content */
 @media (min-width: 80em) {
     .page {
         width: 100% !important;
-        padding: 2em 3em !important;
-    }
-
-    .page__content {
-        width: calc(100% - 320px) !important;
-        float: left !important;
+        padding: 1.5em 3em !important;
     }
 }
 
 @media (min-width: 64em) and (max-width: 80em) {
     .page {
-        padding: 2em !important;
-    }
-
-    .page__content {
-        width: calc(100% - 320px) !important;
-        float: left !important;
+        padding: 1.5em 2em !important;
     }
 }
 
@@ -83,62 +65,62 @@ code, pre, pre code {
     font-family: 'JetBrains Mono', 'Menlo', 'Monaco', monospace !important;
 }
 
-/* Better typography - Clean and minimal */
+/* Better typography - Clean and compact */
 .page__content {
-    font-size: 1.05em !important;
-    line-height: 1.75 !important;
+    font-size: 1.02em !important;
+    line-height: 1.7 !important;
     color: #24292e !important;
 }
 
 .page__content p {
-    margin: 1.3em 0 !important;
-    line-height: 1.75 !important;
+    margin: 1em 0 !important;
+    line-height: 1.7 !important;
 }
 
-/* Headings with clean, minimal style */
+/* Headings with clean, minimal style - Compact spacing */
 .page__content h2 {
-    margin-top: 2.5em !important;
-    margin-bottom: 1em !important;
+    margin-top: 2em !important;
+    margin-bottom: 0.8em !important;
     padding-bottom: 0.3em !important;
     border-bottom: 1px solid #e1e4e8 !important;
     color: #24292e !important;
-    font-size: 1.8em !important;
+    font-size: 1.75em !important;
     font-weight: 600 !important;
 }
 
 .page__content h3 {
-    margin-top: 2em !important;
-    margin-bottom: 0.8em !important;
+    margin-top: 1.6em !important;
+    margin-bottom: 0.6em !important;
     color: #24292e !important;
-    font-size: 1.4em !important;
+    font-size: 1.35em !important;
     font-weight: 600 !important;
 }
 
 .page__content h4 {
-    margin-top: 1.5em !important;
-    margin-bottom: 0.6em !important;
+    margin-top: 1.3em !important;
+    margin-bottom: 0.5em !important;
     color: #24292e !important;
-    font-size: 1.15em !important;
+    font-size: 1.12em !important;
     font-weight: 600 !important;
 }
 
-/* Lists with better styling */
+/* Lists with compact styling */
 .page__content ul,
 .page__content ol {
-    margin: 1.5em 0 !important;
-    padding-left: 2em !important;
+    margin: 1em 0 !important;
+    padding-left: 1.8em !important;
 }
 
 .page__content li {
-    margin: 0.8em 0 !important;
-    line-height: 1.8 !important;
+    margin: 0.5em 0 !important;
+    line-height: 1.7 !important;
 }
 
-/* Blockquotes - Minimal style */
+/* Blockquotes - Minimal compact style */
 .page__content blockquote {
     border-left: 3px solid #dfe2e5 !important;
-    padding: 0.8em 1.2em !important;
-    margin: 1.5em 0 !important;
+    padding: 0.6em 1em !important;
+    margin: 1.2em 0 !important;
     background: #f6f8fa !important;
     color: #6a737d !important;
 }
@@ -153,13 +135,13 @@ code, pre, pre code {
     border: none !important;
 }
 
-/* Code blocks - Simple and clean */
+/* Code blocks - Simple and compact */
 .page__content pre {
     background: #f6f8fa !important;
-    padding: 1.2em !important;
-    border-radius: 6px !important;
+    padding: 1em !important;
+    border-radius: 4px !important;
     overflow-x: auto !important;
-    margin: 1.5em 0 !important;
+    margin: 1.2em 0 !important;
     border: 1px solid #e1e4e8 !important;
 }
 
@@ -171,17 +153,17 @@ code, pre, pre code {
     font-size: 0.9em !important;
 }
 
-/* Images - Clean minimal style */
+/* Images - Clean compact style */
 .page__content img,
 .page__inner-wrap img,
 article img,
 .single .page__content img {
-    max-width: 1100px !important;
+    max-width: 100% !important;
     width: 90% !important;
     height: auto !important;
     border-radius: 4px !important;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.08) !important;
-    margin: 2em auto !important;
+    margin: 1.5em auto !important;
     display: block !important;
     border: 1px solid #e1e4e8 !important;
 }
@@ -189,31 +171,31 @@ article img,
 /* Ensure images in paragraphs also follow these rules */
 .page__content p img,
 .page__inner-wrap p img {
-    max-width: 1100px !important;
+    max-width: 100% !important;
     width: 90% !important;
 }
 
-/* Image captions */
+/* Image captions - Compact */
 .page__content p em {
     display: block !important;
     text-align: center !important;
     color: #6a737d !important;
-    font-size: 0.9em !important;
-    margin-top: 0.6em !important;
-    margin-bottom: 1.5em !important;
+    font-size: 0.88em !important;
+    margin-top: 0.5em !important;
+    margin-bottom: 1.2em !important;
     font-style: italic !important;
 }
 
-/* Table - Clean professional style */
+/* Table - Clean compact style */
 .page__content table {
     display: block !important;
     width: 100% !important;
     overflow-x: auto !important;
-    margin: 2em 0 !important;
+    margin: 1.5em 0 !important;
     border-collapse: collapse !important;
     border: 1px solid #e1e4e8 !important;
     border-radius: 4px !important;
-    font-size: 0.92em !important;
+    font-size: 0.9em !important;
     -webkit-overflow-scrolling: touch !important;
 }
 
@@ -235,14 +217,14 @@ article img,
     white-space: nowrap !important;
 }
 
-/* Simple table header */
+/* Simple table header - Compact */
 .page__content table thead {
     background: #f6f8fa !important;
     border-bottom: 2px solid #e1e4e8 !important;
 }
 
 .page__content table th {
-    padding: 0.8em 1em !important;
+    padding: 0.6em 0.8em !important;
     text-align: left !important;
     font-weight: 600 !important;
     color: #24292e !important;
@@ -250,7 +232,7 @@ article img,
 }
 
 .page__content table td {
-    padding: 0.8em 1em !important;
+    padding: 0.6em 0.8em !important;
     border-bottom: 1px solid #e1e4e8 !important;
     color: #24292e !important;
 }
@@ -279,12 +261,12 @@ article img,
     text-decoration: underline !important;
 }
 
-/* Horizontal rules */
+/* Horizontal rules - Compact */
 .page__content hr {
     border: none !important;
     height: 1px !important;
     background: #e1e4e8 !important;
-    margin: 2.5em 0 !important;
+    margin: 2em 0 !important;
 }
 
 /* Strong emphasis */
@@ -293,65 +275,39 @@ article img,
     font-weight: 600 !important;
 }
 
-/* TOC styling - Clean and minimal */
+/* TOC is hidden, but keep styles for compatibility */
 .toc {
-    background: #f6f8fa !important;
-    border: 1px solid #e1e4e8 !important;
-    border-radius: 4px !important;
-    padding: 1.2em !important;
-    margin-bottom: 2em !important;
+    display: none !important;
 }
 
-.toc .nav__title {
-    color: #24292e !important;
-    font-weight: 600 !important;
-    margin: 0 0 0.8em 0 !important;
-    padding: 0 !important;
-    background: none !important;
-    font-size: 1em !important;
-}
-
-.toc__menu a {
-    color: #586069 !important;
-    padding: 0.3em 0 !important;
-    display: block !important;
-}
-
-.toc__menu a:hover {
-    color: #0366d6 !important;
-    text-decoration: none !important;
-}
-
-/* Reading time and metadata */
+/* Reading time and metadata - Compact */
 .page__meta {
-    font-size: 0.9em !important;
+    font-size: 0.88em !important;
     color: #586069 !important;
-    margin-bottom: 1.5em !important;
+    margin-bottom: 1.2em !important;
 }
 
-/* Responsive adjustments */
+/* Page title - Compact spacing */
+.page__title {
+    margin-bottom: 0.5em !important;
+}
+
+/* Responsive adjustments - Compact */
 @media (max-width: 1024px) {
     .page {
         max-width: 100% !important;
-        padding: 1.5em !important;
+        padding: 1em 1.5em !important;
     }
 
     .page__content {
         width: 100% !important;
-        float: none !important;
-    }
-
-    .sidebar__right {
-        position: static !important;
-        width: 100% !important;
-        margin-left: 0 !important;
-        margin-top: 2em !important;
+        max-width: 100% !important;
     }
 }
 
 @media (max-width: 768px) {
     .page {
-        padding: 1em !important;
+        padding: 0.8em 1em !important;
     }
 
     .page__content {
@@ -360,28 +316,30 @@ article img,
     }
 
     .page__content h2 {
-        font-size: 1.6em !important;
+        font-size: 1.5em !important;
+        margin-top: 1.5em !important;
     }
 
     .page__content h3 {
-        font-size: 1.3em !important;
+        font-size: 1.25em !important;
+        margin-top: 1.2em !important;
     }
 
     .page__content img,
     .page__inner-wrap img,
     article img {
         max-width: 100% !important;
-        width: 100% !important;
-        margin: 1.5em auto !important;
+        width: 95% !important;
+        margin: 1.2em auto !important;
     }
 
     .page__content table {
-        font-size: 0.85em !important;
+        font-size: 0.82em !important;
     }
 
     .page__content table th,
     .page__content table td {
-        padding: 0.8em 0.6em !important;
+        padding: 0.5em 0.5em !important;
         font-size: 0.9em !important;
     }
 }

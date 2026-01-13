@@ -1,4 +1,4 @@
-title: AI Research Blog
+title: Octen Blog
 description: Technical blog about AI and machine learning research
 author:
   name: Octen Team
@@ -52,9 +52,7 @@ defaults:
       comments: false
       share: true
       related: true
-      toc: true
-      toc_label: "Table of Contents"
-      toc_sticky: true
+      toc: false
 
 # Site Author (optional, can customize sidebar)
 author:
