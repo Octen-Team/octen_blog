@@ -1,0 +1,14 @@
+{{- /* Busuanzi Statistics */ -}}
+<div class="busuanzi-stats" style="text-align: center; margin-top: 20px; padding: 10px; font-size: 0.9em; color: var(--secondary);">
+  <span id="busuanzi_container_site_pv" style="margin-right: 15px;">
+    Total Views <span id="busuanzi_value_site_pv"></span>
+  </span>
+  <span id="busuanzi_container_site_uv" style="margin-right: 15px;">
+    Total Visitors <span id="busuanzi_value_site_uv"></span>
+  </span>
+  {{- if .IsPage }}
+  <span id="busuanzi_container_page_pv">
+    Page Views <span id="busuanzi_value_page_pv"></span>
+  </span>
+  {{- end }}
+</div>
