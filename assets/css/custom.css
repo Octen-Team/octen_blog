@@ -10,6 +10,23 @@ body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
 }
 
+/* Ensure proper content wrapper styling */
+.page__inner-wrap,
+.page__content,
+.single .page__content {
+    max-width: 100% !important;
+}
+
+/* Main content area */
+#main {
+    background: #ffffff !important;
+}
+
+.page {
+    width: 100% !important;
+    padding: 1em !important;
+}
+
 code, pre, pre code {
     font-family: 'JetBrains Mono', 'Menlo', 'Monaco', monospace !important;
 }
@@ -107,15 +124,26 @@ code, pre, pre code {
     font-size: 0.95em !important;
 }
 
-/* Images with controlled size */
-.page__content img {
-    max-width: 85% !important;
+/* Images with controlled size - Multiple selectors for better specificity */
+.page__content img,
+.page__inner-wrap img,
+article img,
+.single .page__content img {
+    max-width: 800px !important;
+    width: 100% !important;
     height: auto !important;
     border-radius: 8px !important;
     box-shadow: 0 4px 16px rgba(0,0,0,0.2) !important;
     margin: 2.5em auto !important;
     display: block !important;
     border: 1px solid #e1e4e8 !important;
+}
+
+/* Ensure images in paragraphs also follow these rules */
+.page__content p img,
+.page__inner-wrap p img {
+    max-width: 800px !important;
+    width: 100% !important;
 }
 
 /* Image captions (em tags after images) */
@@ -257,8 +285,12 @@ code, pre, pre code {
         font-size: 1.3em !important;
     }
 
-    .page__content img {
-        max-width: 95% !important;
+    .page__content img,
+    .page__inner-wrap img,
+    article img {
+        max-width: 100% !important;
+        width: 100% !important;
+        margin: 1.5em auto !important;
     }
 
     .page__content table {
