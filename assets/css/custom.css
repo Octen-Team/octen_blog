@@ -10,21 +10,72 @@ body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
 }
 
-/* Ensure proper content wrapper styling */
-.page__inner-wrap,
-.page__content,
-.single .page__content {
-    max-width: 100% !important;
+/* ==========================================================================
+   LAYOUT WIDTH OPTIMIZATION - Make content wider for technical blog
+   ========================================================================== */
+
+/* Increase maximum page width for better content display */
+.page {
+    max-width: 1400px !important;
+    width: 100% !important;
+    padding: 2em !important;
+    margin: 0 auto !important;
 }
 
-/* Main content area */
+/* Wider main content area */
 #main {
+    max-width: 100% !important;
     background: #ffffff !important;
 }
 
-.page {
+/* Adjust content wrapper for wider layout */
+.page__inner-wrap {
+    max-width: none !important;
+}
+
+/* Main content gets more space - reduce sidebar impact */
+.page__content {
+    max-width: none !important;
     width: 100% !important;
-    padding: 1em !important;
+}
+
+/* For layouts with sidebar, adjust the ratio */
+.sidebar.sticky {
+    width: 280px !important;
+}
+
+/* Adjust main content when sidebar is present */
+.sidebar__right {
+    width: 280px !important;
+    margin-left: 2em !important;
+}
+
+.sidebar__right.sticky {
+    width: 280px !important;
+}
+
+/* Grid layout adjustments for wider content */
+@media (min-width: 80em) {
+    .page {
+        width: 100% !important;
+        padding: 2em 3em !important;
+    }
+
+    .page__content {
+        width: calc(100% - 320px) !important;
+        float: left !important;
+    }
+}
+
+@media (min-width: 64em) and (max-width: 80em) {
+    .page {
+        padding: 2em !important;
+    }
+
+    .page__content {
+        width: calc(100% - 320px) !important;
+        float: left !important;
+    }
 }
 
 code, pre, pre code {
@@ -129,8 +180,8 @@ code, pre, pre code {
 .page__inner-wrap img,
 article img,
 .single .page__content img {
-    max-width: 800px !important;
-    width: 100% !important;
+    max-width: 1100px !important;
+    width: 90% !important;
     height: auto !important;
     border-radius: 8px !important;
     box-shadow: 0 4px 16px rgba(0,0,0,0.2) !important;
@@ -142,8 +193,8 @@ article img,
 /* Ensure images in paragraphs also follow these rules */
 .page__content p img,
 .page__inner-wrap p img {
-    max-width: 800px !important;
-    width: 100% !important;
+    max-width: 1100px !important;
+    width: 90% !important;
 }
 
 /* Image captions (em tags after images) */
@@ -157,15 +208,36 @@ article img,
     font-style: italic !important;
 }
 
-/* Tables with gradient header */
+/* Table wrapper for horizontal scrolling */
 .page__content table {
+    display: block !important;
     width: 100% !important;
+    overflow-x: auto !important;
     margin: 2.5em 0 !important;
     border-collapse: collapse !important;
     box-shadow: 0 2px 12px rgba(0,0,0,0.1) !important;
     border-radius: 8px !important;
-    overflow: hidden !important;
     font-size: 0.95em !important;
+    /* Enable smooth scrolling on touch devices */
+    -webkit-overflow-scrolling: touch !important;
+}
+
+/* Reset table structure inside scroll container */
+.page__content table tbody,
+.page__content table thead {
+    display: table !important;
+    width: 100% !important;
+}
+
+.page__content table tbody tr,
+.page__content table thead tr {
+    display: table-row !important;
+}
+
+.page__content table th,
+.page__content table td {
+    display: table-cell !important;
+    white-space: nowrap !important;
 }
 
 .page__content table thead {
@@ -272,9 +344,33 @@ article img,
 }
 
 /* Responsive adjustments */
+@media (max-width: 1024px) {
+    .page {
+        max-width: 100% !important;
+        padding: 1.5em !important;
+    }
+
+    .page__content {
+        width: 100% !important;
+        float: none !important;
+    }
+
+    .sidebar__right {
+        position: static !important;
+        width: 100% !important;
+        margin-left: 0 !important;
+        margin-top: 2em !important;
+    }
+}
+
 @media (max-width: 768px) {
+    .page {
+        padding: 1em !important;
+    }
+
     .page__content {
         font-size: 1em !important;
+        width: 100% !important;
     }
 
     .page__content h2 {
@@ -294,12 +390,13 @@ article img,
     }
 
     .page__content table {
-        font-size: 0.8em !important;
+        font-size: 0.85em !important;
     }
 
     .page__content table th,
     .page__content table td {
-        padding: 0.6em !important;
+        padding: 0.8em 0.6em !important;
+        font-size: 0.9em !important;
     }
 }
 
