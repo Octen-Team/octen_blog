@@ -384,7 +384,7 @@ The Octen series models have been fully open-sourced on the Hugging Face platfor
 |------|------------------|-----------|---------------------|
 | Octen-Embedding-8B | [Octen/Octen-Embedding-8B](https://huggingface.co/Octen/Octen-Embedding-8B) | 7.6B | 4096 |
 | Octen-Embedding-4B | [Octen/Octen-Embedding-4B](https://huggingface.co/Octen/Octen-Embedding-4B) | 4.0B | 2560 |
-| Octen-Embedding-0.6B | [Octen/Octen-Embedding-0.6B](https://huggingface.co/Octen/Octen-Embedding-0.6B) | 0.6B | 1536 |
+| Octen-Embedding-0.6B | [Octen/Octen-Embedding-0.6B](https://huggingface.co/Octen/Octen-Embedding-0.6B) | 0.6B | 1024 |
 
 ### 5.2 Usage
 

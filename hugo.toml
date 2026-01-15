@@ -34,7 +34,7 @@ enableEmoji = true
   # 代码高亮设置
   [params.assets]
     disableFingerprinting = false
-    disableHLJS = true  # 禁用语法高亮
+    disableHLJS = false  # 启用语法高亮
 
 [markup]
   # Markdown 渲染设置
@@ -42,11 +42,11 @@ enableEmoji = true
     [markup.goldmark.renderer]
       unsafe = true  # 允许 HTML in markdown
   [markup.highlight]
-    # 代码高亮设置 - 如不需要可以禁用
+    # 代码高亮设置 - 使用 CSS 类以支持 dark/light 模式切换
     codeFences = true
-    guessSyntax = false
+    guessSyntax = true
     lineNos = false
-    style = "monokai"
+    noClasses = false  # 使用 CSS 类而非内联样式
 
 [menu]
   [[menu.main]]
